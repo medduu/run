@@ -6,7 +6,7 @@ phases:
       java: openjdk8
   build:
     commands:
-    - chmod 777 ./mvn
+    - chmod 777 ./mvnw
     - ./mvnw clean package
   post_build:
     commands:
