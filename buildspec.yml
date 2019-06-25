@@ -1,0 +1,15 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+    - chmod +x ./mvn
+    - ./mvnw clean package
+  post_build:
+    commands:
+    - echo $(basename ./target/*.jar)
+    - pwd
+
+cache:
+  paths:
+  - '/root/.m2/**/*'
