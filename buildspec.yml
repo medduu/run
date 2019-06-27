@@ -12,7 +12,10 @@ phases:
     commands:
     - echo Build completed on `date`
     - mvn package
-
+artifacts:
+  files:
+  - appspec.yml
+  - target/running-0.0.1-SNAPSHOT.jar
   discard-paths: yes
 cache:
   paths:
