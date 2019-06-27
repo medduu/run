@@ -16,6 +16,7 @@ artifacts:
   files:
   - appspec.yml
   - target/running-0.0.1-SNAPSHOT.jar
+  - deploy_script/**
   name: running.zip
   discard-paths: yes
 cache:
