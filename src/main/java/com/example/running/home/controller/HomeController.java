@@ -22,4 +22,9 @@ public class HomeController {
             clientIp = request.getRemoteAddr ();
         return clientIp + "에서 접속";
     }
+
+    @GetMapping("/healthCheck")
+    public String healthCheck() {
+        return "Deploy Success";
+    }
 }
