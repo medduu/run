@@ -20,6 +20,6 @@ public class HomeController {
         String clientIp = request.getHeader("X-Forwarded-For");
         if(StringUtils.isEmpty (clientIp))
             clientIp = request.getRemoteAddr ();
-        return clientIp;
+        return clientIp + "에서 접속";
     }
 }
