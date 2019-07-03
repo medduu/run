@@ -36,13 +36,7 @@ public class RoleService {
         if(role.isPresent ()) {
             return role.get ( );
         }else {
-            init();
             return getRole(name);
         }
-    }
-
-    private void init(){
-        roleRepository.save(new Role("ROLE_MEMBER"));
-        roleRepository.save(new Role("ROLE_ADMIN"));
     }
 }

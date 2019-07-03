@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -37,6 +38,7 @@ public class MemberControllerTest {
     protected MemberService memberService;
 
     @Test
+    @WithMockUser(roles = "MEMBER")
     public void 회원가입_성공() throws Exception{
         //given
         MemberRequestDto dto = new MemberRequestDto ("testRestApi", "1111", "test");
@@ -55,6 +57,7 @@ public class MemberControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "MEMBER")
     public void 회원수정_성공() throws Exception{
         //given
         MemberRequestDto insertDto = new MemberRequestDto ("testRestApi", "1111", "test");
@@ -75,6 +78,7 @@ public class MemberControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "MEMBER")
     public void 회원조회_성공() throws Exception{
         //given
         MemberRequestDto insertDto = new MemberRequestDto ("testRestApi", "1111", "test");
@@ -93,6 +97,7 @@ public class MemberControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "MEMBER")
     public void 회원삭제_성공() throws Exception{
         //given
         MemberRequestDto insertDto = new MemberRequestDto ("testRestApi", "1111", "test");

@@ -41,7 +41,8 @@ public class MemberRequestDto {
     }
 
     public Member toEntity(Set<Role> roles){
-        return new Member(username, password, name, roles);
+        String encPassword = Member.PASSWORD_ENCODER.encode (password);
+        return new Member(username, encPassword, name, roles);
     }
 
 }
