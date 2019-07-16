@@ -33,9 +33,9 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
                 //.and().httpBasic ()
                 //.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().csrf().disable()
-                //.formLogin ()
+                .formLogin ()
                 //    .loginProcessingUrl ("/")
-                .logout ();
+                .and().logout ();
     }
 
     @Bean
