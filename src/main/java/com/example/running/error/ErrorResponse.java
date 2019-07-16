@@ -1,4 +1,4 @@
-package com.example.running.member.error;
+package com.example.running.error;
 
 import lombok.Getter;
 

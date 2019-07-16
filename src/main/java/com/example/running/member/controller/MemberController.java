@@ -32,5 +32,4 @@ public class MemberController {
     public void deleteMember(@PathVariable Long id){
         memberService.deleteMember(id);
     }
-
 }
